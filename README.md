@@ -4,7 +4,7 @@
 
 ## Demo
 
-The following image is in high quality and captured from a terminal, open it in a new tab and zoom in to view it clearly, For even better preview, download the `demo.html` file and open it in a web browser
+The following image is in high quality and captured from a terminal, <a target="_blank" href="https://github.com/wasi-master/rich-tree/blob/main/screenshot.png">open it in a new tab</a> to view it clearly, For even better preview, download the [`demo.html`](https://raw.githubusercontent.com/wasi-master/rich-tree/main/demo.html) file and open it in a web browser
 
 ![](./screenshot.png)
 
@@ -12,7 +12,7 @@ The following image is in high quality and captured from a terminal, open it in 
 
 The library is still in beta so expect some bugs.
 
-Firstly you'll need to install it from github
+Firstly you'll need to install it from github using [pip](https://github.com/pypa/pip "The python package manager")
 
 ```sh
 pip install git+https://github.com/wasi-master/rich-tree

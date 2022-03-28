@@ -75,7 +75,7 @@ icons = {
     "rmd"     : {"icon": "", "color": "#50a4f2"},
     "json"    : {"icon": "", "color": "#e54b36"},
     "yaml"    : {"icon": "", "color": "#e54b36"},
-    "xml"     : {"icon": "", "color": "#e54b36"},
+    "xml"     : {"icon": "", "color": "#e54b36"},
     "js"      : {"icon": "", "color": "#e7d535"},
     "mjs"     : {"icon": "", "color": "#e7d535"},
     "jsx"     : {"icon": "", "color": "#e7d535"},
