@@ -3,7 +3,6 @@ import pathlib
 
 import rich_click as click
 
-from click import Path
 from .core import walk_directory, Tree, Status, Console, Options
 from .__init__ import __version__ as VERSION
 
@@ -11,7 +10,7 @@ click.rich_click.USE_RICH_MARKUP = True
 DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 
 @click.command()
-@click.argument("directory", default=".", type=Path(exists=True, file_okay=False))
+@click.argument("directory", default=".", type=click.Path(exists=True, file_okay=False))
 @click.option("--soft", is_flag=True, help="Enable soft wrapping of text.", default=None)
 @click.option("--width", "-w", metavar="SIZE", type=int, help="Fit output to [b]SIZE[/] characters.", default=-1)
 @click.option("--export-html", "-o", metavar="PATH", default="", help="Write HTML to [b]PATH[/b].")
