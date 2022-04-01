@@ -11,11 +11,14 @@ default_file_icon = {
 folder_icons = {
     '.github': {"icon": "", "color": "#f9d64d"},
     '.config': {"icon": "", "color": "#f9d64d"},
+    'config': {"icon": "", "color": "#f9d64d"},
     'build'  : {"icon": "", "color": "#f9d64d"},
     'dist'   : {"icon": "", "color": "#f9d64d"},
+    'media'  : {"icon": "", "color": "#f9d64d"},
     'image'  : {"icon": "", "color": "#f9d64d"},
     'images' : {"icon": "", "color": "#f9d64d"},
     'img'    : {"icon": "", "color": "#f9d64d"},
+    'asset' : {"icon": "ﮛ", "color": "#f9d64d"},
     'assets' : {"icon": "ﮛ", "color": "#f9d64d"},
 }
 
@@ -71,7 +74,7 @@ icons = {
     "svg"     : {"icon": "ﰟ", "color": "#fcca3c"},
     "ejs"     : {"icon": "", "color": "#a91e50"},
     "css"     : {"icon": "", "color": "#375ee2"},
-    "less"    : {"icon": "", "color": "#1d365d"},
+    "less"    : {"icon": "", "color": "#215eb5"},
     "fnt"     : {"icon": "", "color": "#165392"},
     "fon"     : {"icon": "", "color": "#165392"},
     "ttf"     : {"icon": "", "color": "#165392"},
