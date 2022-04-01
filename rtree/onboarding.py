@@ -68,7 +68,7 @@ def show_all_icons():
 
     formatted_icons = []
     for icon, color in all_icons.items():
-        formatted_icons.append(Panel(f"[{color}]{icon}[/]"))
+        formatted_icons.append(Panel(f"[{color}]{icon}[/]", border_style=color))
 
     print(Panel(Columns(formatted_icons, align="center"), box=HEAVY, title="[b]All Icons[/]"))
 
