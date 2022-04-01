@@ -10,7 +10,10 @@
   - [ ] Should contain nerd font check
   - [ ] Should contain alias prompt
   - [ ] Should contain documentation link
-
-### Completed Column ✓
-
 - [x] Depth parameter for custom nested directory depth
+- [ ] Add more information about the files
+  - [x] Size
+  - [ ] Created at
+  - [ ] Modified at
+  - [ ] Accessed at
+  - [ ] Git status
