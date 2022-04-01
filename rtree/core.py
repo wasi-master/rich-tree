@@ -65,9 +65,11 @@ def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options:
             style = "dim" if path.name.startswith("__") else ""
             icon, color = get_icon_for_directory(path.name)
             branch = tree.add(
-                Text(icon, style=color)
-                + Text(" ")
-                + Text(escape(path.name), style=f"default on default"),
+                Text.assemble(
+                    Text(icon, style=color),
+                    " ",
+                    Text(escape(path.name), style=f"default on default"),
+                ),
                 style=style,
                 guide_style=style,
             )
