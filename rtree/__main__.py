@@ -18,7 +18,8 @@ DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 @click.option("--exclude", "-e", help="Comma seperated list of files and folders to ignore.", default=DEFAULT_IGNORE)
 @click.option("--ignore-dot", "-id", is_flag=True, help="Ignore files and directories starting with a period.")
 @click.option("--show-size", "-ss", is_flag=True, help="Show the size of each file.", default=False)
-def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size):
+@click.option("--depth", "-d", type=int, help="How many levels to show ", default=-1)
+def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, depth):
     if version:
         print(f"{VERSION}\n")
         return
@@ -28,13 +29,13 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
 
 
     directory = os.path.abspath(directory)
-    options = Options(ignore_files = exclude, ignore_dot=ignore_dot, show_size=show_size, directory=directory)
+    options = Options(ignore_files = exclude, ignore_dot=ignore_dot, show_size=show_size, directory=directory, depth=depth)
     tree = Tree(
         f":open_file_folder: [link file://{directory}]{directory}",
         # guide_style="",
     )
     with Status("Preparing") as status:
-        walk_directory(pathlib.Path(directory), tree, status, options)
+        walk_directory(pathlib.Path(directory), tree, status, options, depth)
         status.update("Finishing up")
         console.print(tree, width=None if width <= 0 else width)
         if export_html:

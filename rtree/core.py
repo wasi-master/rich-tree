@@ -36,8 +36,11 @@ class Options:
             setattr(self, k, v)
 
 
-def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options: Options) -> None:
+def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options: Options, depth=None) -> None:
     """Recursively build a Tree with directory contents."""
+    if depth == 0:
+        return
+
     # Sort dirs first then by filename
     try:
         paths = sorted(
@@ -68,7 +71,7 @@ def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options:
                 style=style,
                 guide_style=style,
             )
-            walk_directory(path, branch, status, options)
+            walk_directory(path, branch, status, options, depth = -1 if depth == -1 else (depth-1))
         else:
             icon, color = get_icon_for_filename(path.name)
             text_filename = Text(path.name, style="default on default")
