@@ -3,6 +3,7 @@ import pathlib
 
 import rich_click as click
 
+from click import Path
 from .core import walk_directory, Tree, Status, Console, Options
 from .__init__ import __version__ as VERSION
 
@@ -10,7 +11,7 @@ click.rich_click.USE_RICH_MARKUP = True
 DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 
 @click.command()
-@click.argument("directory", default=".")
+@click.argument("directory", default=".", type=Path(exists=True, file_okay=False))
 @click.option("--soft", is_flag=True, help="Enable soft wrapping of text.", default=None)
 @click.option("--width", "-w", metavar="SIZE", type=int, help="Fit output to [b]SIZE[/] characters.", default=-1)
 @click.option("--export-html", "-o", metavar="PATH", default="", help="Write HTML to [b]PATH[/b].")
@@ -27,7 +28,6 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
 
     exclude = exclude.split(",")
 
-
     directory = os.path.abspath(directory)
     options = Options(ignore_files = exclude, ignore_dot=ignore_dot, show_size=show_size, directory=directory, depth=depth)
     tree = Tree(
@@ -40,6 +40,7 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
         console.print(tree, width=None if width <= 0 else width)
         if export_html:
             console.save_html(export_html)
+
 
 if __name__ == "__main__":
     cli()
