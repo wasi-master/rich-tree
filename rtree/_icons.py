@@ -167,7 +167,7 @@ icons = {
     "scala"   : {"icon": "", "color": "red"},
     "go"      : {"icon": "", "color": "#27a3ca"},
     "dart"    : {"icon": "", "color": "#2074b8"},
-    "xul"     : {"icon": "", "color": "light_red"},
+    "xul"     : {"icon": "", "color": "#d7642d"},
     "sln"     : {"icon": "", "color": "#945db7"},
     "suo"     : {"icon": "", "color": "#945db7"},
     "pl"      : {"icon": "", "color": "blue"},
