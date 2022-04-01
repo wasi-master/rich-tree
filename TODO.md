@@ -4,10 +4,11 @@
 ### TODO
 
 - [ ] Add .gitignore parsing
+- [ ] Add configuration file
 - [ ] Host documentation on github pages
   - [ ] Have a demo in the documentation
 - [ ] Add a onboarding guide
-  - [ ] Should contain nerd font check
+  - [x] Should contain nerd font check
   - [ ] Should contain alias prompt
   - [ ] Should contain documentation link
 - [x] Depth parameter for custom nested directory depth
