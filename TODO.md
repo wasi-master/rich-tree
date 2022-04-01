@@ -5,12 +5,13 @@
 
 - [ ] Add .gitignore parsing
 - [ ] Add configuration file
+  - [ ] Make it show the onboarding guide if there isn't a config file
 - [ ] Host documentation on github pages
   - [ ] Have a demo in the documentation
-- [ ] Add a onboarding guide
+- [x] Add a onboarding guide
   - [x] Should contain nerd font check
-  - [ ] Should contain alias prompt
-  - [ ] Should contain documentation link
+  - [x] Should contain alias prompt
+  - [x] Should contain documentation link
 - [x] Depth parameter for custom nested directory depth
 - [ ] Add more information about the files
   - [x] Size
