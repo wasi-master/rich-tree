@@ -18,16 +18,24 @@ install()
 
 
 def get_icon_for_filename(filename):
-    file_name, file_extension = os.path.splitext(filename)
-    if filename.lower() in named_icons:
-        return named_icons[filename.lower()]["icon"], named_icons[filename.lower()]["color"]
-    if file_extension[1:] in icons:
-        return icons[file_extension[1:]]["icon"], icons[file_extension[1:]]["color"]
+    lower_name = filename.lower()
+    icon_info = named_icons.get(lower_name)
+    if icon_info is not None:
+        return icon_info["icon"], icon_info["color"]
+    
+    if "." in lower_name:
+        ext = lower_name.rsplit(".", 1)[-1]
+        icon_info = icons.get(ext)
+        if icon_info is not None:
+            return icon_info["icon"], icon_info["color"]
+            
     return default_file_icon["icon"], default_file_icon["color"]
 
 def get_icon_for_directory(filename):
-    if filename.lower() in folder_icons:
-        return folder_icons[filename.lower()]["icon"], folder_icons[filename.lower()]["color"]
+    lower_name = filename.lower()
+    icon_info = folder_icons.get(lower_name)
+    if icon_info is not None:
+        return icon_info["icon"], icon_info["color"]
     return default_folder_icon["icon"], default_folder_icon["color"]
 
 class Options:
@@ -43,43 +51,49 @@ def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options:
 
     # Sort dirs first then by filename
     try:
-        paths = sorted(
-            pathlib.Path(directory).iterdir(),
-            key=lambda path: (path.is_file(), path.name.lower()),
+        entries = sorted(
+            os.scandir(directory),
+            key=lambda entry: (entry.is_file(), entry.name.lower()),
         )
     except (IOError, PermissionError, FileNotFoundError):
         return
-    for path in paths:
-        try:
-            full_path = path.resolve()
-        except (IOError, PermissionError, FileNotFoundError):
-            # Maybe the full path cannot be gotten for some reason
-            full_path = path.name
-        if options.ignore_dot:
-            # Remove hidden files and directories
-            if path.name.startswith("."):
-                continue
-        if path.name in options.ignore_files:
+
+    for entry in entries:
+        name = entry.name
+        if options.ignore_dot and name.startswith("."):
             continue
-        if path.is_dir():
-            style = "dim" if path.name.startswith("__") else ""
-            icon, color = get_icon_for_directory(path.name)
+        if name in options.ignore_files:
+            continue
+
+        full_path = directory / name
+
+        try:
+            is_dir = entry.is_dir()
+        except (IOError, PermissionError):
+            continue
+
+        if is_dir:
+            style = "dim" if name.startswith("__") else ""
+            icon, color = get_icon_for_directory(name)
             branch = tree.add(
                 Text.assemble(
                     Text(icon, style=color),
                     " ",
-                    Text(escape(path.name), style=f"default on default"),
+                    Text(escape(name), style="default on default"),
                 ),
                 style=style,
                 guide_style=style,
             )
-            walk_directory(path, branch, status, options, depth = -1 if depth == -1 else (depth-1))
+            walk_directory(full_path, branch, status, options, depth=-1 if depth == -1 else (depth - 1))
         else:
-            icon, color = get_icon_for_filename(path.name)
-            text_filename = Text(path.name, style="default on default")
-            text_filename.stylize(f"link file://{path}")
+            icon, color = get_icon_for_filename(name)
+            text_filename = Text(name, style="default on default")
+            text_filename.stylize(f"link file://{full_path}")
             if options.show_size:
-                file_size = path.stat().st_size
+                try:
+                    file_size = entry.stat().st_size
+                except (IOError, PermissionError):
+                    file_size = 0
                 text_filename.append(f" ({decimal(file_size)})", "blue")
             tree.add(Text(icon, style=color) + Text(" ", style="default on default") + text_filename)
 
