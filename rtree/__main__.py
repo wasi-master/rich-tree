@@ -19,7 +19,9 @@ DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 @click.option("--ignore-dot", "-id", is_flag=True, help="Ignore files and directories starting with a period.")
 @click.option("--show-size", "-ss", is_flag=True, help="Show the size of each file.", default=False)
 @click.option("--depth", "-d", type=int, help="How many levels to show ", default=-1)
-def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, depth):
+@click.option("--all", "-a", "all_files", is_flag=True, help="Show all files, including hidden and gitignored files.")
+@click.option("--no-gitignore", is_flag=True, help="Disable gitignore parsing/filtering.")
+def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, depth, all_files, no_gitignore):
     if version:
         print(f"{VERSION}\n")
         return
@@ -28,7 +30,15 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
     exclude = exclude.split(",")
 
     directory = os.path.abspath(directory)
-    options = Options(ignore_files = exclude, ignore_dot=ignore_dot, show_size=show_size, directory=directory, depth=depth)
+    options = Options(
+        ignore_files=exclude,
+        ignore_dot=ignore_dot,
+        show_size=show_size,
+        directory=directory,
+        depth=depth,
+        all_files=all_files,
+        no_gitignore=no_gitignore,
+    )
     tree = Tree(
         f":open_file_folder: [link file://{directory}]{directory}",
         # guide_style="",

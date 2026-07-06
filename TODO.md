@@ -3,7 +3,7 @@
 
 ### TODO
 
-- [ ] Add .gitignore parsing
+- [x] Add .gitignore parsing
 - [ ] Add configuration file
   - [ ] Make it show the onboarding guide if there isn't a config file
 - [ ] Host documentation on github pages
