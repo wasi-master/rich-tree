@@ -25,9 +25,14 @@ DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 @click.option("--depth", "-d", type=int, help="How many levels to show ", default=-1)
 @click.option("--all", "-a", "all_files", is_flag=True, help="Show all files, including hidden and gitignored files.")
 @click.option("--no-gitignore", is_flag=True, help="Disable gitignore parsing/filtering.")
-def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, show_created, show_modified, show_accessed, show_git, depth, all_files, no_gitignore):
+@click.option("--onboard", is_flag=True, help="Run the interactive onboarding and setup wizard.")
+def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, show_created, show_modified, show_accessed, show_git, depth, all_files, no_gitignore, onboard):
     if version:
         print(f"{VERSION}\n")
+        return
+    if onboard:
+        from .onboarding import main as onboard_main
+        onboard_main()
         return
     console = Console(soft_wrap=soft, record=bool(export_html))
 
