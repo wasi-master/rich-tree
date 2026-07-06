@@ -150,6 +150,65 @@ class Options:
             setattr(self, k, v)
 
 
+def get_git_status_mapping(directory_path: pathlib.Path) -> dict:
+    """Finds git root and gets a dictionary mapping absolute file paths to status string."""
+    import subprocess
+    import shutil
+    if not shutil.which("git"):
+        return {}
+    try:
+        # Get repository root
+        res = subprocess.run(
+            ["git", "rev-parse", "--show-toplevel"],
+            cwd=str(directory_path),
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        git_root = pathlib.Path(res.stdout.strip()).resolve()
+        
+        # Get git status --porcelain -z
+        res_status = subprocess.run(
+            ["git", "status", "--porcelain", "-z"],
+            cwd=str(git_root),
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        
+        mapping = {}
+        # Parse NUL-terminated output
+        parts = res_status.stdout.split('\x00')
+        i = 0
+        while i < len(parts):
+            part = parts[i]
+            if not part:
+                i += 1
+                continue
+            status_code = part[:2]
+            path_str = part[3:]
+            if 'R' in status_code or 'C' in status_code:
+                # The next element in parts is the destination path
+                if i + 1 < len(parts):
+                    dest_path = parts[i + 1]
+                    abs_dest = (git_root / dest_path).resolve()
+                    mapping[abs_dest] = status_code.strip()
+                    i += 2
+                    continue
+            
+            abs_path = (git_root / path_str).resolve()
+            mapping[abs_path] = status_code.strip()
+            i += 1
+        return mapping
+    except Exception:
+        return {}
+
+
+def format_time(timestamp: float) -> str:
+    from datetime import datetime
+    return datetime.fromtimestamp(timestamp).strftime("%Y-%m-%d %H:%M:%S")
+
+
 def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options: Options, depth=None, gitignore_specs=None) -> None:
     """Recursively build a Tree with directory contents."""
     if depth == 0:
@@ -157,6 +216,10 @@ def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options:
 
     if gitignore_specs is None:
         gitignore_specs = []
+
+    # Initialize git status mapping on options if requested and not yet initialized
+    if getattr(options, "show_git", False) and not hasattr(options, "git_status_mapping"):
+        options.git_status_mapping = get_git_status_mapping(directory)
 
     # Parse local .gitignore if not ignoring gitignore rules
     new_specs = list(gitignore_specs)
@@ -229,12 +292,51 @@ def walk_directory(directory: pathlib.Path, tree: Tree, status: Status, options:
             icon, color = get_icon_for_filename(name)
             text_filename = Text(name, style="dim" if is_dim else "default on default")
             text_filename.stylize(f"link file://{full_path}")
-            if options.show_size:
+            
+            # Fetch stats if needed
+            stat = None
+            if options.show_size or getattr(options, "show_created", False) or getattr(options, "show_modified", False) or getattr(options, "show_accessed", False):
                 try:
-                    file_size = entry.stat().st_size
+                    stat = entry.stat()
                 except (IOError, PermissionError):
-                    file_size = 0
-                text_filename.append(f" ({decimal(file_size)})", "blue" if not is_dim else "dim")
+                    pass
+
+            # Gather file details for parentheses
+            stat_infos = []
+            if options.show_size and stat:
+                stat_infos.append((decimal(stat.st_size), "blue" if not is_dim else "dim"))
+            if getattr(options, "show_created", False) and stat:
+                stat_infos.append((f"created: {format_time(stat.st_ctime)}", "cyan" if not is_dim else "dim"))
+            if getattr(options, "show_modified", False) and stat:
+                stat_infos.append((f"modified: {format_time(stat.st_mtime)}", "green" if not is_dim else "dim"))
+            if getattr(options, "show_accessed", False) and stat:
+                stat_infos.append((f"accessed: {format_time(stat.st_atime)}", "yellow" if not is_dim else "dim"))
+
+            if stat_infos:
+                text_filename.append(" (", "dim" if is_dim else "default")
+                for idx, (info_text, info_style) in enumerate(stat_infos):
+                    if idx > 0:
+                        text_filename.append(", ", "dim" if is_dim else "default")
+                    text_filename.append(info_text, info_style)
+                text_filename.append(")", "dim" if is_dim else "default")
+
+            if getattr(options, "show_git", False):
+                git_mapping = getattr(options, "git_status_mapping", {})
+                file_status = git_mapping.get(full_path.resolve())
+                if file_status:
+                    color_map = {
+                        "M": "yellow",
+                        "A": "green",
+                        "D": "red",
+                        "??": "magenta",
+                        "R": "green",
+                        "C": "green",
+                        "U": "red",
+                    }
+                    git_color = color_map.get(file_status, "magenta")
+                    if is_dim:
+                        git_color = "dim"
+                    text_filename.append(f" [{file_status}]", git_color)
             
             icon_style = "dim" if is_dim else color
             tree.add(Text(icon, style=icon_style) + Text(" ", style="default on default") + text_filename)

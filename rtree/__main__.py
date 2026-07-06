@@ -18,10 +18,14 @@ DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 @click.option("--exclude", "-e", help="Comma seperated list of files and folders to ignore.", default=DEFAULT_IGNORE)
 @click.option("--ignore-dot", "-id", is_flag=True, help="Ignore files and directories starting with a period.")
 @click.option("--show-size", "-ss", is_flag=True, help="Show the size of each file.", default=False)
+@click.option("--show-created", "-sc", is_flag=True, help="Show the creation time of each file.", default=False)
+@click.option("--show-modified", "-sm", is_flag=True, help="Show the modification time of each file.", default=False)
+@click.option("--show-accessed", "-sa", is_flag=True, help="Show the last accessed time of each file.", default=False)
+@click.option("--show-git", "-sg", is_flag=True, help="Show the git status of each file.", default=False)
 @click.option("--depth", "-d", type=int, help="How many levels to show ", default=-1)
 @click.option("--all", "-a", "all_files", is_flag=True, help="Show all files, including hidden and gitignored files.")
 @click.option("--no-gitignore", is_flag=True, help="Disable gitignore parsing/filtering.")
-def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, depth, all_files, no_gitignore):
+def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, show_created, show_modified, show_accessed, show_git, depth, all_files, no_gitignore):
     if version:
         print(f"{VERSION}\n")
         return
@@ -34,6 +38,10 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
         ignore_files=exclude,
         ignore_dot=ignore_dot,
         show_size=show_size,
+        show_created=show_created,
+        show_modified=show_modified,
+        show_accessed=show_accessed,
+        show_git=show_git,
         directory=directory,
         depth=depth,
         all_files=all_files,
