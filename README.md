@@ -7,7 +7,6 @@
 [![PyPI version](https://img.shields.io/pypi/v/rich-tree.svg?style=flat-square&color=4b8bbe)](https://pypi.org/project/rich-tree/)
 [![Python versions](https://img.shields.io/pypi/pyversions/rich-tree.svg?style=flat-square)](https://pypi.org/project/rich-tree/)
 [![License: MIT](https://img.shields.io/pypi/l/rich-tree.svg?style=flat-square&color=2b9f64)](LICENSE)
-[![Downloads](https://img.shields.io/pypi/dm/rich-tree?style=flat-square&color=e54b36)](https://pypi.org/project/rich-tree/)
 
 *Powered by [Rich](https://github.com/Textualize/rich) · [Nerd Fonts](https://www.nerdfonts.com/) · Python*
 
@@ -19,7 +18,7 @@
 
 > Open [`demo.html`](https://raw.githubusercontent.com/wasi-master/rich-tree/main/demo.html) in a browser for the best preview.
 
-![rich-tree demo screenshot](./screenshot.png)
+![rich-tree demo screenshot](https://raw.githubusercontent.com/wasi-master/rich-tree/refs/heads/main/screenshot.png)
 
 </div>
 
