@@ -8,7 +8,7 @@ dynamic = ["version"]
 description = "A better tree command with beautiful icons and colors made in Python"
 readme = "README.md"
 requires-python = ">=3.6"
-license = {file = "LICENSE"}
+license = "MIT"
 authors = [
     {name = "Wasi Master", email = "arianmollik323@gmail.com"}
 ]
@@ -17,7 +17,6 @@ classifiers = [
     "Environment :: Console",
     "Intended Audience :: Developers",
     "Intended Audience :: End Users/Desktop",
-    "License :: OSI Approved :: MIT License",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
