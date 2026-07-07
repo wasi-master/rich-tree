@@ -1,0 +1,2437 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A better tree command with beautiful icons and colors made in Python">
+      
+      
+      
+        <link rel="canonical" href="https://wasi-master.github.io/rich-tree/icons/">
+      
+      
+        <link rel="prev" href="../cli-reference/">
+      
+      
+        <link rel="next" href="../onboarding/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Icon System - rich-tree</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#icon-system" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rich-tree" class="md-header__button md-logo" aria-label="rich-tree" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rich-tree
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Icon System
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wasi-master/rich-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wasi-master/rich-tree
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../features/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cli-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CLI Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Icon System
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../onboarding/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Onboarding Wizard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../configuration/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Configuration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rich-tree" class="md-nav__button md-logo" aria-label="rich-tree" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    rich-tree
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wasi-master/rich-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wasi-master/rich-tree
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../features/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Icon System
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Icon System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-icon-selection-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Icon Selection Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-folder-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named Folder Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-file-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named File Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-icons-by-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Icons by Category
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extension Icons by Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-compiled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems / Compiled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripting-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripting / Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-lisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional / Lisp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data / Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archives-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archives / Packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executables-binaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executables / Binaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D / Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-styling-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Styling Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Custom Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Wizard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-icon-selection-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How Icon Selection Works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-folder-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named Folder Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#named-file-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Named File Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extension-icons-by-category" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Icons by Category
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Extension Icons by Category">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Web
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#python" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Python
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#systems-compiled" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Systems / Compiled
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scripting-shell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scripting / Shell
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#functional-lisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Functional / Lisp
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-config" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data / Config
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Video
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documents" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documents
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#archives-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Archives / Packages
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executables-binaries" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executables / Binaries
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3d-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3D / Design
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#other" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Other
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visual-styling-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visual Styling Rules
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#adding-custom-icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding Custom Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="icon-system">Icon System</h1>
+<p>rich-tree uses <a href="https://www.nerdfonts.com/">Nerd Fonts</a> to display beautiful icons next to every file and folder in the tree. This page documents all supported icons and how the icon selection system works.</p>
+<hr />
+<h2 id="how-icon-selection-works">How Icon Selection Works</h2>
+<p>Icons are resolved in the following priority order:</p>
+<ol>
+<li><strong>Named file match</strong> — The filename (lowercased) is looked up in the named icons table. This covers special files like <code>README.md</code>, <code>Dockerfile</code>, <code>package.json</code>, etc.</li>
+<li><strong>Extension match</strong> — If no named match is found, the file extension (lowercased, after the last <code>.</code>) is looked up in the extension icons table.</li>
+<li><strong>Fallback</strong> — If neither match, a generic file icon is used.</li>
+</ol>
+<p>For <strong>directories</strong>, the directory name (lowercased) is looked up in the folder icons table. If not found, the default folder icon is used.</p>
+<hr />
+<h2 id="default-icons">Default Icons</h2>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Icon</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Default file</td>
+<td><code>nf-fa-file</code></td>
+<td><code>#50a4f2</code> (blue)</td>
+</tr>
+<tr>
+<td>Default folder</td>
+<td><code>nf-fa-folder</code></td>
+<td><code>#f9d64d</code> (yellow)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="named-folder-icons">Named Folder Icons</h2>
+<p>These folder names get a special icon instead of the generic folder icon:</p>
+<table>
+<thead>
+<tr>
+<th>Folder Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.github</code></td>
+<td>GitHub Actions / workflows</td>
+</tr>
+<tr>
+<td><code>.config</code> / <code>config</code></td>
+<td>Configuration</td>
+</tr>
+<tr>
+<td><code>build</code></td>
+<td>Build output</td>
+</tr>
+<tr>
+<td><code>dist</code></td>
+<td>Distribution output</td>
+</tr>
+<tr>
+<td><code>media</code> / <code>image</code> / <code>images</code> / <code>img</code></td>
+<td>Images and media</td>
+</tr>
+<tr>
+<td><code>asset</code> / <code>assets</code></td>
+<td>Project assets</td>
+</tr>
+<tr>
+<td><code>.vscode</code> / <code>vscode</code></td>
+<td>VS Code settings</td>
+</tr>
+<tr>
+<td><code>test</code> / <code>tests</code> / <code>__tests__</code></td>
+<td>Test suites</td>
+</tr>
+<tr>
+<td><code>src</code> / <code>source</code> / <code>sources</code></td>
+<td>Source code</td>
+</tr>
+<tr>
+<td><code>lib</code> / <code>libs</code></td>
+<td>Libraries</td>
+</tr>
+<tr>
+<td><code>doc</code> / <code>docs</code></td>
+<td>Documentation</td>
+</tr>
+<tr>
+<td><code>bin</code> / <code>scripts</code></td>
+<td>Executables and scripts</td>
+</tr>
+<tr>
+<td><code>.git</code> / <code>git</code></td>
+<td>Git repository data</td>
+</tr>
+<tr>
+<td><code>public</code></td>
+<td>Public web assets</td>
+</tr>
+<tr>
+<td><code>temp</code> / <code>tmp</code></td>
+<td>Temporary files</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="named-file-icons">Named File Icons</h2>
+<p>These exact filenames (case-insensitive) get a special icon:</p>
+<table>
+<thead>
+<tr>
+<th>Filename</th>
+<th>Icon type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LICENSE</code> / <code>LICENCE</code></td>
+<td>License</td>
+<td>Open source license</td>
+</tr>
+<tr>
+<td><code>README</code> / <code>README.md</code></td>
+<td>Book</td>
+<td>Documentation</td>
+</tr>
+<tr>
+<td><code>CONTRIBUTING</code> / <code>CONTRIBUTING.md</code></td>
+<td>Handshake</td>
+<td>Contributing guide</td>
+</tr>
+<tr>
+<td><code>CODE_OF_CONDUCT</code> / <code>CODE_OF_CONDUCT.md</code></td>
+<td>Heart</td>
+<td>Code of conduct</td>
+</tr>
+<tr>
+<td><code>yarn.lock</code></td>
+<td>Yarn</td>
+<td>Yarn lockfile</td>
+</tr>
+<tr>
+<td><code>package.json</code></td>
+<td>Node.js</td>
+<td>npm package manifest</td>
+</tr>
+<tr>
+<td><code>package-lock.json</code></td>
+<td>Node.js</td>
+<td>npm lockfile</td>
+</tr>
+<tr>
+<td><code>requirements.txt</code></td>
+<td>Python</td>
+<td>Python dependencies</td>
+</tr>
+<tr>
+<td><code>Pipfile</code> / <code>Pipfile.lock</code></td>
+<td>Python</td>
+<td>Pipenv files</td>
+</tr>
+<tr>
+<td><code>.gitignore</code></td>
+<td>Git</td>
+<td>Git ignore rules</td>
+</tr>
+<tr>
+<td><code>.gitattributes</code></td>
+<td>Git</td>
+<td>Git attributes</td>
+</tr>
+<tr>
+<td><code>Dockerfile</code> / <code>.dockerfile</code></td>
+<td>Docker</td>
+<td>Docker image definition</td>
+</tr>
+<tr>
+<td><code>docker-compose.yml</code> / <code>docker-compose.yaml</code></td>
+<td>Docker</td>
+<td>Docker Compose config</td>
+</tr>
+<tr>
+<td><code>.dockerignore</code></td>
+<td>Docker</td>
+<td>Docker ignore rules</td>
+</tr>
+<tr>
+<td><code>.vscodeignore</code></td>
+<td>VS Code</td>
+<td>VS Code extension ignore</td>
+</tr>
+<tr>
+<td><code>tasks.json</code></td>
+<td>VS Code</td>
+<td>VS Code tasks</td>
+</tr>
+<tr>
+<td><code>.htaccess</code></td>
+<td>Apache</td>
+<td>Apache config</td>
+</tr>
+<tr>
+<td><code>webpack.js</code></td>
+<td>Webpack</td>
+<td>Webpack bundler config</td>
+</tr>
+<tr>
+<td><code>karma.conf.js</code></td>
+<td>Test</td>
+<td>Karma test runner</td>
+</tr>
+<tr>
+<td><code>gruntfile.js</code></td>
+<td>Grunt</td>
+<td>Grunt build tool</td>
+</tr>
+<tr>
+<td><code>gulpfile.js</code></td>
+<td>Gulp</td>
+<td>Gulp build tool</td>
+</tr>
+<tr>
+<td><code>brunch-config.js</code></td>
+<td>Brunch</td>
+<td>Brunch build tool</td>
+</tr>
+<tr>
+<td><code>eslintrc.js</code></td>
+<td>ESLint</td>
+<td>ESLint config</td>
+</tr>
+<tr>
+<td><code>bower.json</code></td>
+<td>Bower</td>
+<td>Bower package manager</td>
+</tr>
+<tr>
+<td><code>.env</code> / <code>.env.*</code></td>
+<td>Env</td>
+<td>Environment variables</td>
+</tr>
+<tr>
+<td><code>go.mod</code> / <code>go.sum</code></td>
+<td>Go</td>
+<td>Go module files</td>
+</tr>
+<tr>
+<td><code>Cargo.toml</code></td>
+<td>Rust</td>
+<td>Rust package manifest</td>
+</tr>
+<tr>
+<td><code>pyproject.toml</code></td>
+<td>Python</td>
+<td>Python project config</td>
+</tr>
+<tr>
+<td><code>.editorconfig</code></td>
+<td>Editor</td>
+<td>Editor configuration</td>
+</tr>
+<tr>
+<td><code>AndroidManifest.xml</code></td>
+<td>Android</td>
+<td>Android app manifest</td>
+</tr>
+<tr>
+<td><code>.gemfile</code></td>
+<td>Ruby</td>
+<td>Gemfile</td>
+</tr>
+<tr>
+<td><code>nuget.config</code></td>
+<td>NuGet</td>
+<td>NuGet configuration</td>
+</tr>
+<tr>
+<td><code>.npmrc</code></td>
+<td>npm</td>
+<td>npm config</td>
+</tr>
+<tr>
+<td><code>.babelrc</code></td>
+<td>Babel</td>
+<td>Babel config</td>
+</tr>
+<tr>
+<td><code>.prettierrc</code></td>
+<td>Prettier</td>
+<td>Prettier config</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="extension-icons-by-category">Extension Icons by Category</h2>
+<h3 id="web">Web</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Language/Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.html</code>, <code>.htm</code>, <code>.xhtml</code></td>
+<td>HTML</td>
+</tr>
+<tr>
+<td><code>.css</code></td>
+<td>CSS</td>
+</tr>
+<tr>
+<td><code>.scss</code>, <code>.sass</code></td>
+<td>Sass/SCSS</td>
+</tr>
+<tr>
+<td><code>.less</code></td>
+<td>Less</td>
+</tr>
+<tr>
+<td><code>.styl</code></td>
+<td>Stylus</td>
+</tr>
+<tr>
+<td><code>.svg</code></td>
+<td>SVG</td>
+</tr>
+<tr>
+<td><code>.js</code>, <code>.mjs</code></td>
+<td>JavaScript</td>
+</tr>
+<tr>
+<td><code>.jsx</code></td>
+<td>JSX (React)</td>
+</tr>
+<tr>
+<td><code>.ts</code></td>
+<td>TypeScript</td>
+</tr>
+<tr>
+<td><code>.tsx</code></td>
+<td>TSX (React + TypeScript)</td>
+</tr>
+<tr>
+<td><code>.vue</code></td>
+<td>Vue.js</td>
+</tr>
+<tr>
+<td><code>.elm</code></td>
+<td>Elm</td>
+</tr>
+<tr>
+<td><code>.ejs</code></td>
+<td>EJS templates</td>
+</tr>
+<tr>
+<td><code>.pug</code></td>
+<td>Pug templates</td>
+</tr>
+<tr>
+<td><code>.haml</code></td>
+<td>HAML templates</td>
+</tr>
+<tr>
+<td><code>.jade</code></td>
+<td>Jade templates</td>
+</tr>
+<tr>
+<td><code>.hbs</code>, <code>.mustache</code></td>
+<td>Handlebars / Mustache</td>
+</tr>
+<tr>
+<td><code>.twig</code></td>
+<td>Twig templates</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python">Python</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.py</code></td>
+<td>Python source</td>
+</tr>
+<tr>
+<td><code>.pyc</code></td>
+<td>Python bytecode</td>
+</tr>
+<tr>
+<td><code>.pyo</code></td>
+<td>Python optimized bytecode</td>
+</tr>
+<tr>
+<td><code>.pyd</code></td>
+<td>Python extension module</td>
+</tr>
+<tr>
+<td><code>.ipynb</code></td>
+<td>Jupyter notebook</td>
+</tr>
+</tbody>
+</table>
+<h3 id="systems-compiled">Systems / Compiled</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.c</code>, <code>.cp</code></td>
+<td>C</td>
+</tr>
+<tr>
+<td><code>.cpp</code>, <code>.cxx</code>, <code>.cc</code></td>
+<td>C++</td>
+</tr>
+<tr>
+<td><code>.h</code>, <code>.hpp</code>, <code>.hxx</code></td>
+<td>C/C++ headers</td>
+</tr>
+<tr>
+<td><code>.cs</code></td>
+<td>C#</td>
+</tr>
+<tr>
+<td><code>.java</code></td>
+<td>Java</td>
+</tr>
+<tr>
+<td><code>.go</code></td>
+<td>Go</td>
+</tr>
+<tr>
+<td><code>.rs</code>, <code>.rlib</code></td>
+<td>Rust</td>
+</tr>
+<tr>
+<td><code>.swift</code></td>
+<td>Swift</td>
+</tr>
+<tr>
+<td><code>.d</code></td>
+<td>D</td>
+</tr>
+<tr>
+<td><code>.hs</code>, <code>.lhs</code></td>
+<td>Haskell</td>
+</tr>
+<tr>
+<td><code>.ml</code>, <code>.mli</code></td>
+<td>OCaml</td>
+</tr>
+<tr>
+<td><code>.scala</code></td>
+<td>Scala</td>
+</tr>
+<tr>
+<td><code>.dart</code></td>
+<td>Dart / Flutter</td>
+</tr>
+<tr>
+<td><code>.kt</code>, <code>.kts</code></td>
+<td>Kotlin</td>
+</tr>
+<tr>
+<td><code>.lua</code></td>
+<td>Lua</td>
+</tr>
+<tr>
+<td><code>.r</code></td>
+<td>R</td>
+</tr>
+<tr>
+<td><code>.jl</code></td>
+<td>Julia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="scripting-shell">Scripting / Shell</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Shell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.sh</code></td>
+<td>Generic shell</td>
+</tr>
+<tr>
+<td><code>.bash</code></td>
+<td>Bash</td>
+</tr>
+<tr>
+<td><code>.zsh</code></td>
+<td>Zsh</td>
+</tr>
+<tr>
+<td><code>.fish</code></td>
+<td>Fish</td>
+</tr>
+<tr>
+<td><code>.ksh</code></td>
+<td>Korn shell</td>
+</tr>
+<tr>
+<td><code>.csh</code></td>
+<td>C shell</td>
+</tr>
+<tr>
+<td><code>.awk</code></td>
+<td>AWK</td>
+</tr>
+<tr>
+<td><code>.ps1</code></td>
+<td>PowerShell</td>
+</tr>
+<tr>
+<td><code>.bat</code></td>
+<td>Windows Batch</td>
+</tr>
+<tr>
+<td><code>.wsf</code></td>
+<td>Windows Script File</td>
+</tr>
+</tbody>
+</table>
+<h3 id="functional-lisp">Functional / Lisp</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Language</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.clj</code>, <code>.cljc</code>, <code>.cljs</code>, <code>.edn</code></td>
+<td>Clojure</td>
+</tr>
+<tr>
+<td><code>.erl</code>, <code>.hrl</code></td>
+<td>Erlang</td>
+</tr>
+<tr>
+<td><code>.ex</code>, <code>.exs</code>, <code>.eex</code></td>
+<td>Elixir</td>
+</tr>
+<tr>
+<td><code>.fs</code>, <code>.fsi</code>, <code>.fsx</code>, <code>.fsscript</code></td>
+<td>F#</td>
+</tr>
+<tr>
+<td><code>.pl</code>, <code>.pm</code>, <code>.t</code></td>
+<td>Perl</td>
+</tr>
+<tr>
+<td><code>.rb</code></td>
+<td>Ruby</td>
+</tr>
+<tr>
+<td><code>.coffee</code></td>
+<td>CoffeeScript</td>
+</tr>
+<tr>
+<td><code>.php</code></td>
+<td>PHP</td>
+</tr>
+<tr>
+<td><code>.vim</code></td>
+<td>Vim script</td>
+</tr>
+</tbody>
+</table>
+<h3 id="data-config">Data / Config</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.json</code>, <code>.jsonc</code></td>
+<td>JSON</td>
+</tr>
+<tr>
+<td><code>.yml</code>, <code>.yaml</code></td>
+<td>YAML</td>
+</tr>
+<tr>
+<td><code>.xml</code>, <code>.xul</code></td>
+<td>XML</td>
+</tr>
+<tr>
+<td><code>.toml</code></td>
+<td>TOML</td>
+</tr>
+<tr>
+<td><code>.ini</code>, <code>.cfg</code>, <code>.conf</code></td>
+<td>Configuration</td>
+</tr>
+<tr>
+<td><code>.csv</code>, <code>.tsv</code></td>
+<td>Delimited data</td>
+</tr>
+<tr>
+<td><code>.rss</code></td>
+<td>RSS feed</td>
+</tr>
+<tr>
+<td><code>.vcf</code></td>
+<td>vCard</td>
+</tr>
+</tbody>
+</table>
+<h3 id="database">Database</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.sql</code></td>
+<td>SQL</td>
+</tr>
+<tr>
+<td><code>.sqlite</code></td>
+<td>SQLite database</td>
+</tr>
+<tr>
+<td><code>.db</code>, <code>.dbf</code></td>
+<td>Database</td>
+</tr>
+<tr>
+<td><code>.mdb</code></td>
+<td>Microsoft Access</td>
+</tr>
+<tr>
+<td><code>.sav</code></td>
+<td>SPSS / game save</td>
+</tr>
+<tr>
+<td><code>.dump</code></td>
+<td>Database dump</td>
+</tr>
+</tbody>
+</table>
+<h3 id="images">Images</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.jpg</code>, <code>.jpeg</code></td>
+<td>JPEG</td>
+</tr>
+<tr>
+<td><code>.png</code></td>
+<td>PNG</td>
+</tr>
+<tr>
+<td><code>.gif</code></td>
+<td>GIF</td>
+</tr>
+<tr>
+<td><code>.bmp</code></td>
+<td>BMP</td>
+</tr>
+<tr>
+<td><code>.ico</code></td>
+<td>Icon</td>
+</tr>
+<tr>
+<td><code>.svg</code></td>
+<td>SVG</td>
+</tr>
+<tr>
+<td><code>.tiff</code></td>
+<td>TIFF</td>
+</tr>
+<tr>
+<td><code>.heic</code></td>
+<td>HEIC (Apple)</td>
+</tr>
+<tr>
+<td><code>.webp</code></td>
+<td>WebP</td>
+</tr>
+<tr>
+<td><code>.avif</code></td>
+<td>AVIF</td>
+</tr>
+</tbody>
+</table>
+<h3 id="audio">Audio</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp3</code>, <code>.mp2</code>, <code>.mpa</code></td>
+<td>MP3</td>
+</tr>
+<tr>
+<td><code>.wav</code></td>
+<td>WAV</td>
+</tr>
+<tr>
+<td><code>.ogg</code></td>
+<td>Ogg Vorbis</td>
+</tr>
+<tr>
+<td><code>.flac</code></td>
+<td>FLAC</td>
+</tr>
+<tr>
+<td><code>.aiff</code></td>
+<td>AIFF</td>
+</tr>
+<tr>
+<td><code>.aac</code>, <code>.m4a</code></td>
+<td>AAC/M4A</td>
+</tr>
+<tr>
+<td><code>.opus</code></td>
+<td>Opus</td>
+</tr>
+<tr>
+<td><code>.wma</code></td>
+<td>Windows Media Audio</td>
+</tr>
+<tr>
+<td><code>.mid</code>, <code>.midi</code></td>
+<td>MIDI</td>
+</tr>
+</tbody>
+</table>
+<h3 id="video">Video</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.mp4</code>, <code>.m4v</code></td>
+<td>MPEG-4</td>
+</tr>
+<tr>
+<td><code>.mkv</code></td>
+<td>Matroska</td>
+</tr>
+<tr>
+<td><code>.avi</code></td>
+<td>AVI</td>
+</tr>
+<tr>
+<td><code>.mov</code></td>
+<td>QuickTime</td>
+</tr>
+<tr>
+<td><code>.wmv</code></td>
+<td>Windows Media Video</td>
+</tr>
+<tr>
+<td><code>.flv</code></td>
+<td>Flash Video</td>
+</tr>
+<tr>
+<td><code>.webm</code></td>
+<td>WebM</td>
+</tr>
+<tr>
+<td><code>.ogv</code>, <code>.vob</code></td>
+<td>Other formats</td>
+</tr>
+<tr>
+<td><code>.mpg</code>, <code>.mpeg</code></td>
+<td>MPEG</td>
+</tr>
+<tr>
+<td><code>.3gp</code></td>
+<td>3GP</td>
+</tr>
+<tr>
+<td><code>.hevc</code>, <code>.gifv</code></td>
+<td>Modern formats</td>
+</tr>
+</tbody>
+</table>
+<h3 id="documents">Documents</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.pdf</code></td>
+<td>PDF</td>
+</tr>
+<tr>
+<td><code>.doc</code>, <code>.docx</code></td>
+<td>Microsoft Word</td>
+</tr>
+<tr>
+<td><code>.xls</code>, <code>.xlsx</code></td>
+<td>Microsoft Excel</td>
+</tr>
+<tr>
+<td><code>.ppt</code>, <code>.pptx</code></td>
+<td>Microsoft PowerPoint</td>
+</tr>
+<tr>
+<td><code>.tex</code></td>
+<td>LaTeX</td>
+</tr>
+<tr>
+<td><code>.md</code>, <code>.markdown</code>, <code>.rmd</code></td>
+<td>Markdown</td>
+</tr>
+</tbody>
+</table>
+<h3 id="archives-packages">Archives / Packages</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.zip</code></td>
+<td>ZIP</td>
+</tr>
+<tr>
+<td><code>.tar</code></td>
+<td>TAR</td>
+</tr>
+<tr>
+<td><code>.gz</code></td>
+<td>GZIP</td>
+</tr>
+<tr>
+<td><code>.rar</code></td>
+<td>RAR</td>
+</tr>
+<tr>
+<td><code>.7z</code></td>
+<td>7-Zip</td>
+</tr>
+<tr>
+<td><code>.z</code></td>
+<td>Compress</td>
+</tr>
+<tr>
+<td><code>.deb</code></td>
+<td>Debian package</td>
+</tr>
+<tr>
+<td><code>.pkg</code></td>
+<td>macOS package</td>
+</tr>
+<tr>
+<td><code>.dmg</code></td>
+<td>macOS disk image</td>
+</tr>
+<tr>
+<td><code>.iso</code>, <code>.vcd</code></td>
+<td>Disk images</td>
+</tr>
+<tr>
+<td><code>.cab</code></td>
+<td>Windows cabinet</td>
+</tr>
+</tbody>
+</table>
+<h3 id="executables-binaries">Executables / Binaries</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.exe</code>, <code>.com</code></td>
+<td>Windows executable</td>
+</tr>
+<tr>
+<td><code>.msi</code></td>
+<td>Windows installer</td>
+</tr>
+<tr>
+<td><code>.elf</code></td>
+<td>Linux ELF binary</td>
+</tr>
+<tr>
+<td><code>.app</code></td>
+<td>macOS app bundle</td>
+</tr>
+<tr>
+<td><code>.apk</code></td>
+<td>Android APK</td>
+</tr>
+<tr>
+<td><code>.dll</code></td>
+<td>Windows DLL</td>
+</tr>
+<tr>
+<td><code>.so</code></td>
+<td>Linux shared library</td>
+</tr>
+<tr>
+<td><code>.o</code>, <code>.ko</code></td>
+<td>Object files</td>
+</tr>
+<tr>
+<td><code>.sys</code></td>
+<td>System file</td>
+</tr>
+<tr>
+<td><code>.bin</code>, <code>.dat</code></td>
+<td>Binary data</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3d-design">3D / Design</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.blend</code></td>
+<td>Blender</td>
+</tr>
+<tr>
+<td><code>.obj</code>, <code>.fbx</code>, <code>.stl</code></td>
+<td>3D models</td>
+</tr>
+<tr>
+<td><code>.c4d</code></td>
+<td>Cinema 4D</td>
+</tr>
+<tr>
+<td><code>.3ds</code></td>
+<td>3DS Max</td>
+</tr>
+<tr>
+<td><code>.max</code></td>
+<td>3DS Max scene</td>
+</tr>
+<tr>
+<td><code>.mesh</code></td>
+<td>Mesh data</td>
+</tr>
+<tr>
+<td><code>.ai</code></td>
+<td>Adobe Illustrator</td>
+</tr>
+<tr>
+<td><code>.psd</code>, <code>.psb</code></td>
+<td>Adobe Photoshop</td>
+</tr>
+</tbody>
+</table>
+<h3 id="other">Other</h3>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.log</code></td>
+<td>Log files</td>
+</tr>
+<tr>
+<td><code>.lock</code></td>
+<td>Lockfiles</td>
+</tr>
+<tr>
+<td><code>.diff</code></td>
+<td>Diff/patch files</td>
+</tr>
+<tr>
+<td><code>.map</code></td>
+<td>Source maps</td>
+</tr>
+<tr>
+<td><code>.eml</code>, <code>.email</code>, <code>.emlx</code>, <code>.msg</code></td>
+<td>Email files</td>
+</tr>
+<tr>
+<td><code>.oft</code>, <code>.ost</code>, <code>.pst</code></td>
+<td>Outlook files</td>
+</tr>
+<tr>
+<td><code>.cer</code></td>
+<td>Certificate</td>
+</tr>
+<tr>
+<td><code>.cur</code></td>
+<td>Cursor file</td>
+</tr>
+<tr>
+<td><code>.ink</code></td>
+<td>Ink file</td>
+</tr>
+<tr>
+<td><code>.fnt</code>, <code>.fon</code>, <code>.ttf</code>, <code>.otf</code>, <code>.woff</code>, <code>.woff2</code></td>
+<td>Font files</td>
+</tr>
+<tr>
+<td><code>.bak</code></td>
+<td>Backup files</td>
+</tr>
+<tr>
+<td><code>.sln</code>, <code>.suo</code></td>
+<td>Visual Studio solution</td>
+</tr>
+<tr>
+<td><code>.pub</code></td>
+<td>Publisher / public key</td>
+</tr>
+<tr>
+<td><code>.pp</code></td>
+<td>Puppet manifest</td>
+</tr>
+<tr>
+<td><code>.xul</code></td>
+<td>XUL</td>
+</tr>
+<tr>
+<td><code>.gradle</code></td>
+<td>Gradle build</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="visual-styling-rules">Visual Styling Rules</h2>
+<ul>
+<li><strong>Regular files</strong> — icon in its designated color, name in default terminal color</li>
+<li><strong>Hidden files / gitignored files</strong> — icon and name rendered in <code>dim</code> style</li>
+<li><strong><code>__dunder__</code> directories</strong> — rendered in <code>dim</code> style</li>
+<li><strong>Important dotfiles</strong> (whitelisted) — always rendered normally, never dimmed</li>
+</ul>
+<hr />
+<h2 id="adding-custom-icons">Adding Custom Icons</h2>
+<p>The icon data lives in <a href="https://github.com/wasi-master/rich-tree/blob/main/rtree/_icons.py"><code>rtree/_icons.py</code></a>. You can fork the project and add icons to:</p>
+<ul>
+<li><code>named_icons</code> — for exact filename matches</li>
+<li><code>icons</code> — for file extension matches</li>
+<li><code>folder_icons</code> — for directory name matches</li>
+</ul>
+<p>Each entry follows the format:</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s2">&quot;extension_or_name&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;icon&quot;</span><span class="p">:</span> <span class="s2">&quot;NERD_FONT_GLYPH&quot;</span><span class="p">,</span> <span class="s2">&quot;color&quot;</span><span class="p">:</span> <span class="s2">&quot;#hexcolor or rich_color_name&quot;</span><span class="p">}</span>
+</span></code></pre></div>
+<p>See <a href="../contributing/">Contributing</a> for instructions on submitting icon additions upstream.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

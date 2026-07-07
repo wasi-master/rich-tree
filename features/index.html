@@ -1,0 +1,1729 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A better tree command with beautiful icons and colors made in Python">
+      
+      
+      
+        <link rel="canonical" href="https://wasi-master.github.io/rich-tree/features/">
+      
+      
+        <link rel="prev" href="../getting-started/">
+      
+      
+        <link rel="next" href="../cli-reference/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Features - rich-tree</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#features" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="rich-tree" class="md-header__button md-logo" aria-label="rich-tree" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            rich-tree
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Features
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="green" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/wasi-master/rich-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wasi-master/rich-tree
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../getting-started/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Getting Started
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Features
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../cli-reference/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  CLI Reference
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../icons/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Icon System
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../onboarding/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Onboarding Wizard
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../configuration/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Configuration
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../contributing/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Contributing
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Changelog
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="rich-tree" class="md-nav__button md-logo" aria-label="rich-tree" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    rich-tree
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/wasi-master/rich-tree" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    wasi-master/rich-tree
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Getting Started
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Features
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗂️ Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 Colors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clickable-file-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Clickable File Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 File Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 File Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-size-show-size-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Size (--show-size / -ss)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-time-show-created-sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creation Time (--show-created / -sc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-time-show-modified-sm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modification Time (--show-modified / -sm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-time-show-accessed-sa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Time (--show-accessed / -sa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-metadata-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Metadata Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-status-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌿 Git Status Overlay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🙈 Smart Filtering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🙈 Smart Filtering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gitignore-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gitignore Parsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile-hiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dotfile Hiding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-exclusions-exclude-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Exclusions (--exclude / -e)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-everything-all-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Show Everything (--all / -a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Depth Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 HTML Export
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Output Formatting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Output Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#width-control-width-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Width Control (--width / -w)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-wrap-soft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Wrap (--soft)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onboarding-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧙 Onboarding Wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Sorting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cli-reference/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CLI Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../icons/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Icon System
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Onboarding Wizard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuration/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuration
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contributing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Contributing
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Changelog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#icons" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗂️ Icons
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🎨 Colors
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clickable-file-links" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔗 Clickable File Links
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#file-metadata" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📊 File Metadata
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📊 File Metadata">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#file-size-show-size-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Size (--show-size / -ss)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creation-time-show-created-sc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creation Time (--show-created / -sc)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modification-time-show-modified-sm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modification Time (--show-modified / -sm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-time-show-accessed-sa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Access Time (--show-accessed / -sa)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combining-metadata-flags" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Combining Metadata Flags
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git-status-overlay" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌿 Git Status Overlay
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#smart-filtering" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🙈 Smart Filtering
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🙈 Smart Filtering">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gitignore-parsing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        gitignore Parsing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dotfile-hiding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dotfile Hiding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custom-exclusions-exclude-e" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custom Exclusions (--exclude / -e)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-everything-all-a" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Show Everything (--all / -a)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#depth-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Depth Control
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🌐 HTML Export
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output-formatting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📐 Output Formatting
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📐 Output Formatting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#width-control-width-w" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Width Control (--width / -w)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#soft-wrap-soft" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Soft Wrap (--soft)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#onboarding-wizard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🧙 Onboarding Wizard
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🗄️ Sorting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#error-handling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🛡️ Error Handling
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚡ Performance
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="features">Features</h1>
+<p>rich-tree is packed with features that go far beyond the classic <code>tree</code> command. This page explains each feature in detail.</p>
+<hr />
+<h2 id="icons">🗂️ Icons</h2>
+<p>Every file and directory is displayed with a visually distinct <strong>Nerd Font icon</strong> and matching <strong>color</strong>. Icons are selected based on:</p>
+<ol>
+<li><strong>Exact filename match</strong> (e.g., <code>README.md</code> → book icon, <code>Dockerfile</code> → Docker whale)</li>
+<li><strong>File extension match</strong> (e.g., <code>.py</code> → Python snake, <code>.rs</code> → Rust gear)</li>
+<li><strong>Folder name match</strong> (e.g., <code>src</code> → source icon, <code>docs</code> → document icon)</li>
+<li><strong>Fallback</strong> — a generic file or folder icon</li>
+</ol>
+<p>Over <strong>220 file type extensions</strong> and <strong>40+ named folders and files</strong> are covered.<br />
+See the full <a href="../icons/">Icon System reference</a>.</p>
+<hr />
+<h2 id="colors">🎨 Colors</h2>
+<p>Every icon has an associated color chosen to match the language or tool it represents:</p>
+<table>
+<thead>
+<tr>
+<th>Color</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python blue <code>#4b8bbe</code></td>
+<td><code>.py</code>, <code>.pyc</code></td>
+</tr>
+<tr>
+<td>JavaScript yellow <code>#e7d535</code></td>
+<td><code>.js</code>, <code>.mjs</code></td>
+</tr>
+<tr>
+<td>TypeScript blue <code>#3a73be</code></td>
+<td><code>.ts</code>, <code>.tsx</code></td>
+</tr>
+<tr>
+<td>Rust orange <code>#e64619</code></td>
+<td><code>.rs</code>, <code>.rlib</code></td>
+</tr>
+<tr>
+<td>HTML orange <code>#f06529</code></td>
+<td><code>.htm</code>, <code>.html</code>, <code>.xhtml</code></td>
+</tr>
+<tr>
+<td>CSS blue <code>#375ee2</code></td>
+<td><code>.css</code></td>
+</tr>
+<tr>
+<td>Go cyan <code>#27a3ca</code></td>
+<td><code>.go</code></td>
+</tr>
+<tr>
+<td>Markdown blue <code>#50a4f2</code></td>
+<td><code>.md</code>, <code>.markdown</code></td>
+</tr>
+</tbody>
+</table>
+<p>Dimmed colors are used for hidden, gitignored, or <code>__dunder__</code> directories to visually differentiate them from regular content.</p>
+<hr />
+<h2 id="clickable-file-links">🔗 Clickable File Links</h2>
+<p>File names in the tree are <strong>clickable hyperlinks</strong> in terminals that support OSC 8 hyperlinks (e.g., iTerm2, Kitty, Wezterm, GNOME Terminal, Windows Terminal).</p>
+<p>Clicking a filename opens the file in your system's default application.</p>
+<p>The root directory label is also a clickable link to the directory itself.</p>
+<hr />
+<h2 id="file-metadata">📊 File Metadata</h2>
+<p>You can display extra information alongside each file with these flags:</p>
+<h3 id="file-size-show-size-ss">File Size (<code>--show-size</code> / <code>-ss</code>)</h3>
+<p>Shows human-readable file size in decimal format:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>main.py (12.4 kB)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>data.csv (1.2 MB)
+</span></code></pre></div>
+<p>Sizes are colored <strong>blue</strong> for regular files, and dimmed for hidden/ignored files.</p>
+<h3 id="creation-time-show-created-sc">Creation Time (<code>--show-created</code> / <code>-sc</code>)</h3>
+<p>Shows when the file was created:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>main.py (created: 2024-01-15 09:23:41)
+</span></code></pre></div>
+<p>Colored <strong>cyan</strong>.</p>
+<h3 id="modification-time-show-modified-sm">Modification Time (<code>--show-modified</code> / <code>-sm</code>)</h3>
+<p>Shows when the file was last modified:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>main.py (modified: 2024-06-30 14:55:12)
+</span></code></pre></div>
+<p>Colored <strong>green</strong>.</p>
+<h3 id="access-time-show-accessed-sa">Access Time (<code>--show-accessed</code> / <code>-sa</code>)</h3>
+<p>Shows when the file was last accessed:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>main.py (accessed: 2024-07-01 08:10:44)
+</span></code></pre></div>
+<p>Colored <strong>yellow</strong>.</p>
+<h3 id="combining-metadata-flags">Combining Metadata Flags</h3>
+<p>All metadata flags can be combined:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>rtree<span class="w"> </span>-ss<span class="w"> </span>-sc<span class="w"> </span>-sm<span class="w"> </span>-sa
+</span></code></pre></div>
+<p>Output:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>main.py (12.4 kB, created: 2024-01-15 09:23:41, modified: 2024-06-30 14:55:12, accessed: 2024-07-01 08:10:44)
+</span></code></pre></div></p>
+<p>Timestamps use the format <code>YYYY-MM-DD HH:MM:SS</code> in local time.</p>
+<hr />
+<h2 id="git-status-overlay">🌿 Git Status Overlay</h2>
+<p>Run <code>rtree --show-git</code> (or <code>-sg</code>) to overlay <strong>git status</strong> on every file in the tree. This is incredibly useful for quickly seeing what's changed in a project.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>rtree<span class="w"> </span>-sg
+</span></code></pre></div>
+<p>Output example:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>📂 project
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├── 🐍 main.py [M]      ← modified
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>├── 📄 new_feature.py [A]  ← staged/added
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>├── 📄 old.py [D]       ← deleted
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>└── 📄 scratch.py [??]  ← untracked
+</span></code></pre></div></p>
+<p><strong>Status code colors:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Code</th>
+<th>Color</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Modified</td>
+<td><code>M</code></td>
+<td>Yellow</td>
+<td>File changed but not staged, or staged changes</td>
+</tr>
+<tr>
+<td>Added</td>
+<td><code>A</code></td>
+<td>Green</td>
+<td>New file staged for commit</td>
+</tr>
+<tr>
+<td>Deleted</td>
+<td><code>D</code></td>
+<td>Red</td>
+<td>File deleted</td>
+</tr>
+<tr>
+<td>Untracked</td>
+<td><code>??</code></td>
+<td>Magenta</td>
+<td>New file, not tracked by git</td>
+</tr>
+<tr>
+<td>Renamed</td>
+<td><code>R</code></td>
+<td>Green</td>
+<td>File renamed</td>
+</tr>
+<tr>
+<td>Copied</td>
+<td><code>C</code></td>
+<td>Green</td>
+<td>File copied</td>
+</tr>
+<tr>
+<td>Unmerged</td>
+<td><code>U</code></td>
+<td>Red</td>
+<td>Merge conflict</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Requirements:</strong>
+- <code>git</code> must be installed and on your <code>PATH</code>
+- The target directory must be inside a git repository</p>
+<p>If git is not available or the directory is not a git repo, the flag is silently ignored (no error is shown).</p>
+<p><strong>How it works:</strong></p>
+<p>rich-tree runs <code>git status --porcelain -z</code> from the git repository root and builds a mapping of file paths to status codes. Renamed/copied files (which have two paths in the output) are correctly handled.</p>
+<hr />
+<h2 id="smart-filtering">🙈 Smart Filtering</h2>
+<h3 id="gitignore-parsing">gitignore Parsing</h3>
+<p>By default, rich-tree reads <code>.gitignore</code> files at every level of the tree and hides matched files — just like git itself does.</p>
+<ul>
+<li>Multiple <code>.gitignore</code> files (at different directory levels) are stacked and applied hierarchically.</li>
+<li>Supports negation patterns (<code>!</code>)</li>
+<li>Supports directory-only patterns (trailing <code>/</code>)</li>
+<li>Supports root-anchored patterns (leading <code>/</code>)</li>
+<li>Supports glob wildcards (<code>*</code>, <code>?</code>, <code>**</code>)</li>
+</ul>
+<p>To disable gitignore filtering:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rtree<span class="w"> </span>--no-gitignore
+</span></code></pre></div>
+<h3 id="dotfile-hiding">Dotfile Hiding</h3>
+<p>By default, dotfiles (files/folders starting with <code>.</code>) that are <strong>not</strong> in the "important dotfiles" whitelist are hidden. Use <code>--ignore-dot</code> to also hide the whitelisted ones, or <code>--all</code> to show everything.</p>
+<p><strong>Important dotfiles that are never hidden by default:</strong></p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.gitignore</code></td>
+<td>Git ignore rules</td>
+</tr>
+<tr>
+<td><code>.gitattributes</code></td>
+<td>Git attributes</td>
+</tr>
+<tr>
+<td><code>.editorconfig</code></td>
+<td>Editor configuration</td>
+</tr>
+<tr>
+<td><code>.env</code></td>
+<td>Environment variables</td>
+</tr>
+<tr>
+<td><code>.env.example</code></td>
+<td>Environment variable template</td>
+</tr>
+<tr>
+<td><code>.env.local</code></td>
+<td>Local environment overrides</td>
+</tr>
+<tr>
+<td><code>.env.development</code></td>
+<td>Development environment</td>
+</tr>
+<tr>
+<td><code>.env.production</code></td>
+<td>Production environment</td>
+</tr>
+<tr>
+<td><code>.npmrc</code></td>
+<td>npm configuration</td>
+</tr>
+<tr>
+<td><code>.babelrc</code></td>
+<td>Babel configuration</td>
+</tr>
+<tr>
+<td><code>.eslintrc</code></td>
+<td>ESLint configuration</td>
+</tr>
+<tr>
+<td><code>.eslintrc.json</code></td>
+<td>ESLint configuration (JSON)</td>
+</tr>
+<tr>
+<td><code>.prettierrc</code></td>
+<td>Prettier configuration</td>
+</tr>
+<tr>
+<td><code>.vscodeignore</code></td>
+<td>VS Code extension ignore</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custom-exclusions-exclude-e">Custom Exclusions (<code>--exclude</code> / <code>-e</code>)</h3>
+<p>Exclude specific folder or file names by providing a comma-separated list. The default exclusion list is <code>venv,node_modules,.git,.history</code>.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>rtree<span class="w"> </span>-e<span class="w"> </span>dist,build,__pycache__
+</span></code></pre></div>
+<blockquote>
+<p>Note: Specifying <code>--exclude</code> replaces the entire default list. To keep defaults and add more, include them explicitly:
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rtree<span class="w"> </span>-e<span class="w"> </span>venv,node_modules,.git,.history,dist,build
+</span></code></pre></div></p>
+</blockquote>
+<h3 id="show-everything-all-a">Show Everything (<code>--all</code> / <code>-a</code>)</h3>
+<p>Override all filtering (hidden files, gitignore rules) and show every file:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rtree<span class="w"> </span>--all
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>rtree<span class="w"> </span>-a
+</span></code></pre></div>
+<hr />
+<h2 id="depth-control">📁 Depth Control</h2>
+<p>Limit how many levels deep the tree recurses with <code>--depth</code> / <code>-d</code>:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span><span class="w">      </span><span class="c1"># only immediate children</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w">      </span><span class="c1"># two levels deep</span>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w">      </span><span class="c1"># three levels deep</span>
+</span></code></pre></div>
+<p>A depth of <code>-1</code> (default) means unlimited recursion.</p>
+<hr />
+<h2 id="html-export">🌐 HTML Export</h2>
+<p>Save the tree as a self-contained HTML file with all colors and styles preserved:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rtree<span class="w"> </span>-o<span class="w"> </span>output.html
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>rtree<span class="w"> </span>--export-html<span class="w"> </span>/tmp/project-snapshot.html
+</span></code></pre></div>
+<p>The HTML file can be:
+- Opened in any web browser
+- Shared with teammates who don't have rich-tree installed
+- Embedded in documentation or reports</p>
+<hr />
+<h2 id="output-formatting">📐 Output Formatting</h2>
+<h3 id="width-control-width-w">Width Control (<code>--width</code> / <code>-w</code>)</h3>
+<p>Force the output to fit within a specific number of characters:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rtree<span class="w"> </span>-w<span class="w"> </span><span class="m">100</span>
+</span></code></pre></div>
+<h3 id="soft-wrap-soft">Soft Wrap (<code>--soft</code>)</h3>
+<p>Enable soft (word-boundary) text wrapping instead of truncating at the terminal edge:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>rtree<span class="w"> </span>--soft
+</span></code></pre></div>
+<hr />
+<h2 id="onboarding-wizard">🧙 Onboarding Wizard</h2>
+<p>Run the interactive setup wizard for guided configuration:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rtree<span class="w"> </span>--onboard
+</span></code></pre></div>
+<p>The wizard covers:
+1. <strong>Icon verification</strong> — displays all icons to check Nerd Font rendering
+2. <strong>Alias setup</strong> — provides shell-specific instructions to alias <code>tree</code> → <code>rtree</code>
+3. <strong>Feature showcase</strong> — an overview of all available flags</p>
+<p>See the full <a href="../onboarding/">Onboarding Wizard guide</a>.</p>
+<hr />
+<h2 id="sorting">🗄️ Sorting</h2>
+<p>Directories always appear before files in each level. Within each group (directories and files separately), entries are sorted case-insensitively by name.</p>
+<hr />
+<h2 id="error-handling">🛡️ Error Handling</h2>
+<ul>
+<li>Directories with <strong>permission errors</strong> are silently skipped (no crash).</li>
+<li>Files that can't be <code>stat()</code>-ed for metadata are skipped gracefully.</li>
+<li><code>git status</code> errors (no git, not a repo) are silently ignored.</li>
+<li>Pretty Rich tracebacks are installed for any unexpected errors.</li>
+</ul>
+<hr />
+<h2 id="performance">⚡ Performance</h2>
+<ul>
+<li>rich-tree uses <code>os.scandir()</code> for fast directory iteration.</li>
+<li>A <strong>live status indicator</strong> (<code>Preparing…</code> / <code>Processing [file]</code>) is shown while the tree is being built.</li>
+<li>Git status is fetched once per run with a single <code>git status --porcelain -z</code> call.</li>
+<li><code>.gitignore</code> files are parsed lazily as directories are traversed.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

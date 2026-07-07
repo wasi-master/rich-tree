@@ -1,0 +1,4 @@
+/* Hide navigation sidebar on the left */
+.md-sidebar--primary {
+  display: none !important;
+}
