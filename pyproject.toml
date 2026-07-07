@@ -26,6 +26,10 @@ classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
     "Topic :: Terminals",
 ]
 keywords = ["rtree", "tree", "rich", "cli", "nerdfonts"]
@@ -35,6 +39,12 @@ dependencies = [
     "rich-click",
     "questionary",
     "shellingham",
+]
+
+[project.optional-dependencies]
+docs = [
+    "mkdocs>=9.0.0",
+    "mkdocs-material>=9.0.0",
 ]
 
 [project.urls]

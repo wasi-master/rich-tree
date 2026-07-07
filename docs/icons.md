@@ -337,7 +337,7 @@ These exact filenames (case-insensitive) get a special icon:
 
 ## Adding Custom Icons
 
-The icon data lives in [`rtree/_icons.py`](../rtree/_icons.py). You can fork the project and add icons to:
+The icon data lives in [`rtree/_icons.py`](https://github.com/wasi-master/rich-tree/blob/main/rtree/_icons.py). You can fork the project and add icons to:
 
 - `named_icons` — for exact filename matches
 - `icons` — for file extension matches

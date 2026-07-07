@@ -93,7 +93,7 @@ rich-tree/
 
 ## 🎨 Adding Icons
 
-The most common contribution is adding icons for new file types or folders. Edit [`rtree/_icons.py`](../rtree/_icons.py).
+The most common contribution is adding icons for new file types or folders. Edit [`rtree/_icons.py`](https://github.com/wasi-master/rich-tree/blob/main/rtree/_icons.py).
 
 ### Adding a File Extension Icon
 
@@ -197,4 +197,4 @@ Be respectful and constructive. See [CODE_OF_CONDUCT.md](https://github.com/wasi
 
 ## 📜 License
 
-By contributing, you agree that your contributions will be licensed under the [MIT License](../LICENSE).
+By contributing, you agree that your contributions will be licensed under the [MIT License](https://github.com/wasi-master/rich-tree/blob/main/LICENSE).

@@ -4,7 +4,7 @@
 
 | Requirement | Minimum | Notes |
 |-------------|---------|-------|
-| Python | 3.6+ | Tested on 3.6 – 3.10 |
+| Python | 3.6+ | Tested on 3.6 – 3.14 |
 | Nerd Font | Any Nerd Font v3 | Required for icons to render correctly |
 | OS | Any | Windows, macOS, Linux |
 
