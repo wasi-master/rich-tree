@@ -28,6 +28,18 @@ rtree ../sibling-dir          # relative path
 
 ## Options
 
+### `--compact` / `--no-compact` (`-c`) or `--squash` / `--no-squash`
+
+Squash single nested subdirectories containing nothing but another subdirectory into a single line (like VS Code compact folders). Enabled by default.
+
+```sh
+rtree                       # Compact folders enabled by default
+rtree --no-compact          # Expand each directory level onto its own line
+rtree --no-squash           # Same as --no-compact
+```
+
+---
+
 ### `--version` / `-v`
 
 Print the version number and exit.

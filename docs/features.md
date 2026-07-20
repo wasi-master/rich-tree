@@ -215,6 +215,22 @@ rtree -a
 
 ---
 
+## 📁 Compact Folders (Squashing)
+
+By default, rich-tree automatically squashes nested directories that contain only a single subdirectory into a single line (similar to VS Code's compact folders). This is especially helpful in languages like Java or Kotlin with deeply nested package structures (e.g. `app/src/main/java/com/example/app`).
+
+```sh
+# Enabled by default
+rtree
+
+# Disable compacting to see every directory on a separate line
+rtree --no-compact
+# or
+rtree --no-squash
+```
+
+---
+
 ## 📁 Depth Control
 
 Limit how many levels deep the tree recurses with `--depth` / `-d`:

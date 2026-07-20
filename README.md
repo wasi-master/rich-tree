@@ -28,6 +28,7 @@
 
 | Feature | Description |
 |---------|-------------|
+| 📁 **Compact folders** | Squash single nested subdirectories into a single line (enabled by default) |
 | 🗂️ **220+ file type icons** | Nerd Font glyphs for every major language and tool |
 | 🎨 **Per-type colors** | Brand-accurate colors for every file type |
 | 🔗 **Clickable links** | Files are hyperlinks in supported terminals |
@@ -104,6 +105,7 @@ rtree [OPTIONS] [DIRECTORY]
 
 | Flag | Short | Description |
 |------|-------|-------------|
+| `--compact` / `--no-compact` | `-c` | Squash single nested subdirectories (default: on, alias: `--squash` / `--no-squash`) |
 | `--show-size` | `-ss` | Show file sizes |
 | `--show-created` | `-sc` | Show creation timestamps |
 | `--show-modified` | `-sm` | Show modification timestamps |

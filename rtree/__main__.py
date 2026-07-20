@@ -25,8 +25,9 @@ DEFAULT_IGNORE = "venv,node_modules,.git,.history"
 @click.option("--depth", "-d", type=int, help="How many levels to show ", default=-1)
 @click.option("--all", "-a", "all_files", is_flag=True, help="Show all files, including hidden and gitignored files.")
 @click.option("--no-gitignore", is_flag=True, help="Disable gitignore parsing/filtering.")
+@click.option("--compact/--no-compact", "--squash/--no-squash", "-c", "compact", default=True, help="Squash single nested subdirectories into a single line (enabled by default).")
 @click.option("--onboard", is_flag=True, help="Run the interactive onboarding and setup wizard.")
-def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, show_created, show_modified, show_accessed, show_git, depth, all_files, no_gitignore, onboard):
+def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_size, show_created, show_modified, show_accessed, show_git, depth, all_files, no_gitignore, compact, onboard):
     if version:
         print(f"{VERSION}\n")
         return
@@ -51,6 +52,7 @@ def cli(directory, soft, width, export_html, version, exclude, ignore_dot, show_
         depth=depth,
         all_files=all_files,
         no_gitignore=no_gitignore,
+        compact=compact,
     )
     tree = Tree(
         f":open_file_folder: [link file://{directory}]{directory}",

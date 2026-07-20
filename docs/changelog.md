@@ -4,6 +4,13 @@ All notable changes to **rich-tree** are documented here.
 
 This project follows [Semantic Versioning](https://semver.org/).
 
+## [1.1.0] — 2026-07-20
+
+### Added
+
+- 📁 **Compact Folders (Squashing)**: Automatically squash single nested subdirectories into a single line (like VS Code compact folders). Enabled by default.
+- 🎛️ **`--compact` / `--no-compact` (`--squash` / `--no-squash`, `-c`)**: Flags to toggle folder compacting on or off.
+
 ---
 
 ## [1.0.0] — Initial Release
