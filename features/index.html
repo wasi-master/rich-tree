@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -739,6 +739,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compact-folders-squashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Compact Folders (Squashing)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#depth-control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1217,6 +1228,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compact-folders-squashing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Compact Folders (Squashing)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#depth-control" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1608,18 +1630,29 @@ See the full <a href="../icons/">Icon System reference</a>.</p>
 </span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>rtree<span class="w"> </span>-a
 </span></code></pre></div>
 <hr />
+<h2 id="compact-folders-squashing">📁 Compact Folders (Squashing)</h2>
+<p>By default, rich-tree automatically squashes nested directories that contain only a single subdirectory into a single line (similar to VS Code's compact folders). This is especially helpful in languages like Java or Kotlin with deeply nested package structures (e.g. <code>app/src/main/java/com/example/app</code>).</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="c1"># Enabled by default</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>rtree
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1"># Disable compacting to see every directory on a separate line</span>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>rtree<span class="w"> </span>--no-compact
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a><span class="c1"># or</span>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>rtree<span class="w"> </span>--no-squash
+</span></code></pre></div>
+<hr />
 <h2 id="depth-control">📁 Depth Control</h2>
 <p>Limit how many levels deep the tree recurses with <code>--depth</code> / <code>-d</code>:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span><span class="w">      </span><span class="c1"># only immediate children</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w">      </span><span class="c1"># two levels deep</span>
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w">      </span><span class="c1"># three levels deep</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">1</span><span class="w">      </span><span class="c1"># only immediate children</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w">      </span><span class="c1"># two levels deep</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w">      </span><span class="c1"># three levels deep</span>
 </span></code></pre></div>
 <p>A depth of <code>-1</code> (default) means unlimited recursion.</p>
 <hr />
 <h2 id="html-export">🌐 HTML Export</h2>
 <p>Save the tree as a self-contained HTML file with all colors and styles preserved:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rtree<span class="w"> </span>-o<span class="w"> </span>output.html
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>rtree<span class="w"> </span>--export-html<span class="w"> </span>/tmp/project-snapshot.html
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rtree<span class="w"> </span>-o<span class="w"> </span>output.html
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>rtree<span class="w"> </span>--export-html<span class="w"> </span>/tmp/project-snapshot.html
 </span></code></pre></div>
 <p>The HTML file can be:
 - Opened in any web browser
@@ -1629,16 +1662,16 @@ See the full <a href="../icons/">Icon System reference</a>.</p>
 <h2 id="output-formatting">📐 Output Formatting</h2>
 <h3 id="width-control-width-w">Width Control (<code>--width</code> / <code>-w</code>)</h3>
 <p>Force the output to fit within a specific number of characters:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rtree<span class="w"> </span>-w<span class="w"> </span><span class="m">100</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>rtree<span class="w"> </span>-w<span class="w"> </span><span class="m">100</span>
 </span></code></pre></div>
 <h3 id="soft-wrap-soft">Soft Wrap (<code>--soft</code>)</h3>
 <p>Enable soft (word-boundary) text wrapping instead of truncating at the terminal edge:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>rtree<span class="w"> </span>--soft
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rtree<span class="w"> </span>--soft
 </span></code></pre></div>
 <hr />
 <h2 id="onboarding-wizard">🧙 Onboarding Wizard</h2>
 <p>Run the interactive setup wizard for guided configuration:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rtree<span class="w"> </span>--onboard
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rtree<span class="w"> </span>--onboard
 </span></code></pre></div>
 <p>The wizard covers:
 1. <strong>Icon verification</strong> — displays all icons to check Nerd Font rendering
@@ -1722,7 +1755,7 @@ See the full <a href="../icons/">Icon System reference</a>.</p>
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>

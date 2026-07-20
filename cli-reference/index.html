@@ -23,7 +23,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -31,7 +31,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -623,6 +623,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#-compact-no-compact-c-or-squash-no-squash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --compact / --no-compact (-c) or --squash / --no-squash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-version-v" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1029,6 +1040,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#-compact-no-compact-c-or-squash-no-squash" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        --compact / --no-compact (-c) or --squash / --no-squash
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#-version-v" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -1281,10 +1303,17 @@
 </span></code></pre></div>
 <hr />
 <h2 id="options">Options</h2>
+<h3 id="-compact-no-compact-c-or-squash-no-squash"><code>--compact</code> / <code>--no-compact</code> (<code>-c</code>) or <code>--squash</code> / <code>--no-squash</code></h3>
+<p>Squash single nested subdirectories containing nothing but another subdirectory into a single line (like VS Code compact folders). Enabled by default.</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rtree<span class="w">                       </span><span class="c1"># Compact folders enabled by default</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>rtree<span class="w"> </span>--no-compact<span class="w">          </span><span class="c1"># Expand each directory level onto its own line</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>rtree<span class="w"> </span>--no-squash<span class="w">           </span><span class="c1"># Same as --no-compact</span>
+</span></code></pre></div>
+<hr />
 <h3 id="-version-v"><code>--version</code> / <code>-v</code></h3>
 <p>Print the version number and exit.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>rtree<span class="w"> </span>--version
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># Output: 0.1.0</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rtree<span class="w"> </span>--version
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="c1"># Output: 0.1.0</span>
 </span></code></pre></div>
 <hr />
 <h3 id="-onboard"><code>--onboard</code></h3>
@@ -1292,13 +1321,13 @@
 1. Displays all icons to verify Nerd Font rendering.
 2. Optionally shows shell-specific alias setup instructions.
 3. Showcases all available CLI flags.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>rtree<span class="w"> </span>--onboard
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>rtree<span class="w"> </span>--onboard
 </span></code></pre></div>
 <p>See the full <a href="../onboarding/">Onboarding Wizard guide</a>.</p>
 <hr />
 <h3 id="-depth-d"><code>--depth</code> / <code>-d</code></h3>
 <p>Limit the recursion depth of the tree.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>-d INTEGER   (default: -1, meaning unlimited)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>-d INTEGER   (default: -1, meaning unlimited)
 </span></code></pre></div>
 <table>
 <thead>
@@ -1327,21 +1356,21 @@
 </tbody>
 </table>
 <p><strong>Examples:</strong></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w">          </span><span class="c1"># two levels deep</span>
-</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>rtree<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1"># only immediate children</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>rtree<span class="w"> </span>-d<span class="w"> </span><span class="m">2</span><span class="w">          </span><span class="c1"># two levels deep</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>rtree<span class="w"> </span>--depth<span class="w"> </span><span class="m">1</span><span class="w">     </span><span class="c1"># only immediate children</span>
 </span></code></pre></div>
 <hr />
 <h3 id="-exclude-e"><code>--exclude</code> / <code>-e</code></h3>
 <p>Comma-separated list of file and folder <strong>names</strong> to exclude from the tree.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>-e TEXT   (default: &quot;venv,node_modules,.git,.history&quot;)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>-e TEXT   (default: &quot;venv,node_modules,.git,.history&quot;)
 </span></code></pre></div>
 <blockquote>
 <p><strong>Note:</strong> The default exclusion list already hides common noise folders (<code>venv</code>, <code>node_modules</code>, <code>.git</code>, <code>.history</code>). Specifying <code>--exclude</code> <strong>replaces</strong> the entire default list.</p>
 </blockquote>
 <p><strong>Examples:</strong></p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>rtree<span class="w"> </span>-e<span class="w"> </span>dist,build<span class="w">                    </span><span class="c1"># exclude dist and build</span>
-</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>rtree<span class="w"> </span>--exclude<span class="w"> </span>venv,node_modules,.git<span class="w"> </span><span class="c1"># same as default</span>
-</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>rtree<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w">                            </span><span class="c1"># exclude nothing (show everything)</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rtree<span class="w"> </span>-e<span class="w"> </span>dist,build<span class="w">                    </span><span class="c1"># exclude dist and build</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>rtree<span class="w"> </span>--exclude<span class="w"> </span>venv,node_modules,.git<span class="w"> </span><span class="c1"># same as default</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>rtree<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;&quot;</span><span class="w">                            </span><span class="c1"># exclude nothing (show everything)</span>
 </span></code></pre></div>
 <hr />
 <h3 id="-ignore-dot-id"><code>--ignore-dot</code> / <code>-id</code></h3>
@@ -1352,8 +1381,8 @@
 <code>.env.local</code>, <code>.env.development</code>, <code>.env.production</code>, <code>.npmrc</code>, <code>.babelrc</code>,
 <code>.eslintrc</code>, <code>.eslintrc.json</code>, <code>.prettierrc</code>, <code>.vscodeignore</code></p>
 </blockquote>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>rtree<span class="w"> </span>--ignore-dot
-</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>rtree<span class="w"> </span>-id
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>rtree<span class="w"> </span>--ignore-dot
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>rtree<span class="w"> </span>-id
 </span></code></pre></div>
 <hr />
 <h3 id="-all-a"><code>--all</code> / <code>-a</code></h3>
@@ -1361,34 +1390,34 @@
 - Hidden files (files/directories starting with <code>.</code>)
 - Files matched by <code>.gitignore</code> rules</p>
 <p>By default, hidden and gitignored files are omitted.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>rtree<span class="w"> </span>--all
-</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>rtree<span class="w"> </span>-a
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rtree<span class="w"> </span>--all
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>rtree<span class="w"> </span>-a
 </span></code></pre></div>
 <hr />
 <h3 id="-no-gitignore"><code>--no-gitignore</code></h3>
 <p>Disable <code>.gitignore</code> parsing entirely. All files that would normally be filtered by <code>.gitignore</code> rules will be shown.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>rtree<span class="w"> </span>--no-gitignore
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rtree<span class="w"> </span>--no-gitignore
 </span></code></pre></div>
 <hr />
 <h3 id="-show-size-ss"><code>--show-size</code> / <code>-ss</code></h3>
 <p>Display the size of each file in human-readable decimal format (e.g., <code>1.2 kB</code>, <code>3.4 MB</code>).</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>rtree<span class="w"> </span>--show-size
-</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>rtree<span class="w"> </span>-ss
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>rtree<span class="w"> </span>--show-size
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>rtree<span class="w"> </span>-ss
 </span></code></pre></div>
 <p>Output example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>📂 project
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>├── 🐍 main.py (12.4 kB)
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>└── 📄 README.md (3.2 kB)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>📂 project
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>├── 🐍 main.py (12.4 kB)
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>└── 📄 README.md (3.2 kB)
 </span></code></pre></div></p>
 <hr />
 <h3 id="-show-created-sc"><code>--show-created</code> / <code>-sc</code></h3>
 <p>Display the <strong>creation timestamp</strong> of each file in <code>YYYY-MM-DD HH:MM:SS</code> format.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rtree<span class="w"> </span>--show-created
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>rtree<span class="w"> </span>-sc
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>rtree<span class="w"> </span>--show-created
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>rtree<span class="w"> </span>-sc
 </span></code></pre></div>
 <p>Output example:
-<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>📂 project
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├── 🐍 main.py (created: 2024-01-15 09:23:41)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>📂 project
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>├── 🐍 main.py (created: 2024-01-15 09:23:41)
 </span></code></pre></div></p>
 <blockquote>
 <p><strong>Note:</strong> On some Linux filesystems, creation time may not be available (it may show the inode change time instead).</p>
@@ -1396,20 +1425,20 @@
 <hr />
 <h3 id="-show-modified-sm"><code>--show-modified</code> / <code>-sm</code></h3>
 <p>Display the <strong>last modification timestamp</strong> of each file.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>rtree<span class="w"> </span>--show-modified
-</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>rtree<span class="w"> </span>-sm
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rtree<span class="w"> </span>--show-modified
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>rtree<span class="w"> </span>-sm
 </span></code></pre></div>
 <hr />
 <h3 id="-show-accessed-sa"><code>--show-accessed</code> / <code>-sa</code></h3>
 <p>Display the <strong>last accessed timestamp</strong> of each file.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>rtree<span class="w"> </span>--show-accessed
-</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>rtree<span class="w"> </span>-sa
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rtree<span class="w"> </span>--show-accessed
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>rtree<span class="w"> </span>-sa
 </span></code></pre></div>
 <hr />
 <h3 id="-show-git-sg"><code>--show-git</code> / <code>-sg</code></h3>
 <p>Overlay <strong>git status indicators</strong> on each file. Requires <code>git</code> to be available on your <code>PATH</code> and the directory to be inside a git repository.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>rtree<span class="w"> </span>--show-git
-</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>rtree<span class="w"> </span>-sg
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>rtree<span class="w"> </span>--show-git
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>rtree<span class="w"> </span>-sg
 </span></code></pre></div>
 <p>Status codes shown:</p>
 <table>
@@ -1461,41 +1490,41 @@
 <hr />
 <h3 id="-export-html-o"><code>--export-html</code> / <code>-o</code></h3>
 <p>Save the styled tree output as a self-contained <strong>HTML file</strong>. The HTML file preserves all colors and styles.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>-o PATH / --export-html PATH
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>-o PATH / --export-html PATH
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>rtree<span class="w"> </span>-o<span class="w"> </span>tree.html
-</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>rtree<span class="w"> </span>--export-html<span class="w"> </span>/tmp/project-tree.html
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>rtree<span class="w"> </span>-o<span class="w"> </span>tree.html
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>rtree<span class="w"> </span>--export-html<span class="w"> </span>/tmp/project-tree.html
 </span></code></pre></div>
 <p>Open the resulting file in any web browser to view the tree.</p>
 <hr />
 <h3 id="-width-w"><code>--width</code> / <code>-w</code></h3>
 <p>Fit the output to a specific number of characters wide.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>-w SIZE / --width SIZE   (default: terminal width)
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>-w SIZE / --width SIZE   (default: terminal width)
 </span></code></pre></div>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>rtree<span class="w"> </span>-w<span class="w"> </span><span class="m">120</span>
-</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>rtree<span class="w"> </span>--width<span class="w"> </span><span class="m">80</span>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>rtree<span class="w"> </span>-w<span class="w"> </span><span class="m">120</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>rtree<span class="w"> </span>--width<span class="w"> </span><span class="m">80</span>
 </span></code></pre></div>
 <p>Useful when piping to a file or for consistent output on different terminals.</p>
 <hr />
 <h3 id="-soft"><code>--soft</code></h3>
 <p>Enable <strong>soft wrapping</strong> of text. By default, rich hard-wraps at the terminal width. With this flag, long lines are allowed to wrap at word boundaries rather than being truncated.</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>rtree<span class="w"> </span>--soft
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>rtree<span class="w"> </span>--soft
 </span></code></pre></div>
 <hr />
 <h2 id="combining-options">Combining Options</h2>
 <p>Options can be freely combined:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="c1"># Show sizes, git status, 3 levels deep, exclude build artifacts</span>
-</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>rtree<span class="w"> </span>-ss<span class="w"> </span>-sg<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w"> </span>-e<span class="w"> </span>dist,build,__pycache__
-</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
-</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1"># Show everything including hidden files with timestamps</span>
-</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>rtree<span class="w"> </span>-a<span class="w"> </span>-sm<span class="w"> </span>-sc
-</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
-</span><span id="__span-23-7"><a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1"># Export a styled HTML snapshot of the project</span>
-</span><span id="__span-23-8"><a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>rtree<span class="w"> </span>-ss<span class="w"> </span>-sg<span class="w"> </span>-o<span class="w"> </span>snapshot.html
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="c1"># Show sizes, git status, 3 levels deep, exclude build artifacts</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>rtree<span class="w"> </span>-ss<span class="w"> </span>-sg<span class="w"> </span>-d<span class="w"> </span><span class="m">3</span><span class="w"> </span>-e<span class="w"> </span>dist,build,__pycache__
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="c1"># Show everything including hidden files with timestamps</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>rtree<span class="w"> </span>-a<span class="w"> </span>-sm<span class="w"> </span>-sc
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="c1"># Export a styled HTML snapshot of the project</span>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>rtree<span class="w"> </span>-ss<span class="w"> </span>-sg<span class="w"> </span>-o<span class="w"> </span>snapshot.html
 </span></code></pre></div>
 <hr />
 <h2 id="help">Help</h2>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>rtree<span class="w"> </span>--help
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>rtree<span class="w"> </span>--help
 </span></code></pre></div>
 <p>The <code>--help</code> output is rendered with Rich for an attractive, colorized display.</p>
 <hr />
@@ -1576,7 +1605,7 @@
       <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
       
     
   </body>
