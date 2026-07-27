@@ -35,7 +35,7 @@ classifiers = [
 keywords = ["rtree", "tree", "rich", "cli", "nerdfonts"]
 dependencies = [
     "rich",
-    "click",
+    "click < 8.2.0",
     "rich-click",
     "questionary",
     "shellingham",

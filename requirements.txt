@@ -1,5 +1,5 @@
 rich
-click
+click < 8.2.0
 rich_click
 questionary
 shellingham
